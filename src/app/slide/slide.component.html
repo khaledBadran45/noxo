@@ -1,0 +1,11 @@
+<section class="vh-100 d-flex align-items-end ">
+<div class="container py-3">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let ahmed of aboAhmed">
+        <ng-template carouselSlide [id]="ahmed.id">
+          <img [src]="imgPrefix+ahmed.poster_path" [alt]="ahmed.title">
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+</div>
+ </section>

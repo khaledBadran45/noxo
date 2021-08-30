@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="movieDetails col-sm-12 col-md-2  text-center" *ngFor="let movie of movies">
+      <a [routerLink]='["/movieDetails",movie.id]'>
+      <img class="w-100" [src]='imgPrefix+movie.poster_path'>
+      <h6 class="my-2">{{movie.title}}</h6>
+      </a>
+    </div> 
+                 
+  </div>
+</div>

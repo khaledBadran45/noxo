@@ -1,0 +1,23 @@
+<div class="container">
+    <div [style]="color" [class]="alert">{{error}}</div>
+        <form [formGroup]="loginForm" (ngSubmit)='sendLogin(loginForm)'>
+    
+            <div class="form-group">
+                <label for="email">email</label>
+                <input formControlName="email" type="email" class="form-control" id="email">
+                <div *ngIf="loginForm.get('email')?.errors != null && loginForm.get('email')?.touched" class="alert">
+                  <p *ngIf="loginForm.get('email')?.errors?.required">email is required</p>
+                  <p *ngIf="loginForm.get('email')?.errors?.email">ur email invalid</p>
+              </div>
+              </div> 
+    
+            <div class="form-group">
+                <label for="password">password</label>
+                <input formControlName="password" type="password" class="form-control" id="password">
+                <div *ngIf="loginForm.get('password')?.errors != null && loginForm.get('password')?.touched" class="alert">
+                  <p *ngIf="loginForm.get('password')?.errors?.required">password is required</p>
+                </div>
+              </div>
+              <button [disabled]=loginForm.invalid type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>

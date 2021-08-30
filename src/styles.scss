@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,.6) ;
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+.container{
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+ul li{
+    list-style: none;
+}
+
+body{
+   background:$bgColor; 
+   color:$fontColor;
+}
+.navbar{
+    background:$bgColor !important; 
+}
+a{
+    color:$fontColor !important ;
+}
+.alert{
+
+    color:red;
+    padding-top:3px ;
+    padding:0;
+}
+.line{
+    border:1px solid $borderColor;
+    background:$borderColor ;
+    width:30%;
+    
+}
+.mr-2{
+    margin-left: 5px;
+    
+}
+.parg-container{
+    color:$secondFontColor
+}
+.col-sm-12{
+    width:90%;
+    text-align: center;
+}
+img,h6{
+    cursor:pointer
+}
+
+h4{
+    color:$secondFontColor
+}
+h6{
+    color: $secondFontColor;
+    line-height:1.5;
+    font-size: 16.7px;
+}
+.movieType{
+    background: $bgTransparent;
+    border-radius: 8%;
+    padding:5px 5px;
+    margin:5px;
+    margin-right:0;
+}

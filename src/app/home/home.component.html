@@ -1,0 +1,103 @@
+<app-slide [aboAhmed]='trendingMovies'></app-slide>
+       <div class="container">
+         <div class="row d-flex py-5">
+            <div class="col-md-4 my-5">
+              <div class="line"></div>
+              <div class="my-3">
+              <h3 class="head text-capitalize"> trending movies<br>
+                to watch right now</h3> 
+               <div class="d-flex parg-container">
+                    <p class="head text-capitalize">most wastches movies</p><p class="mr-2"> by days</p>
+               </div>
+              </div>
+              <div class="line"></div>
+            </div>
+                <div class="movieDetails col-sm-12 col-md-2 text-center" *ngFor="let movie of trendingMovies">
+                    <a [routerLink]='["/movieDetails",movie.id]'>
+                        <img class="w-100" [src]='imgPrefix+movie.poster_path'>
+                        <h6 class="my-2">{{movie.title}}</h6>
+                    </a>
+
+                </div> 
+                
+                <div class="w-100">
+                    
+                    <a class="d-flex  align-items-center justify-content-center" routerLink="/movies">
+                      <button  class="btn btn-info"> see more</button>    
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row py-5">
+        <div class="col-md-4 my-5">
+            <div class="line"></div>
+            <div class="head my-3">
+              <h3 class="head text-capitalize"> trending movies<br>
+                to watch right now</h3> 
+               <div class="d-flex parg-container">
+                    <p class="head text-capitalize">most wastches movies</p><p class="mr-2"> by days</p>
+               </div>
+            </div>
+            <div class="line"></div>
+        </div>
+
+        <div class="col-sm-12 col-md-2 text-center" *ngFor="let tv of trendingTv">
+            <a [routerLink]='["/tvDetails",tv.id]'>
+                <img class="w-100" [src]='imgPrefix+tv.poster_path'>
+                <h6 class="my-2">{{tv.name}}</h6>   
+            </a>
+        </div> 
+        <div class="w-100 py-5">      
+            <a class="d-flex  align-items-center justify-content-center" routerLink="/tv">
+              <button  class="btn btn-info"> see more</button>    
+            </a>
+        </div>
+    </div>
+
+
+
+<div class="row py-5">
+    <div class="col-md-4 my-5">
+        <div class="line"></div>
+        <div class="head my-3">
+          <h3 class="head text-capitalize"> trending people<br>
+            to watch right now</h3> 
+           <div class="d-flex parg-container">
+                <p class="head text-capitalize">most wastches movies</p><p class="mr-2"> by days</p>
+           </div>
+        </div>
+        <div class="line"></div>
+    </div>
+
+    <div class="col-sm-12 col-md-2 text-center" *ngFor="let person of trendingPerson">
+        <a [routerLink]='["/personDetails",person.id ]'>
+            <img class="w-100" [src]='imgPrefix+person.profile_path'>
+            <h6 class="my-2">{{person.name}}</h6>
+        </a>  
+    </div> 
+    <div class="w-100 py-5">      
+        <a class="d-flex  align-items-center justify-content-center" routerLink="/people">
+          <button  class="btn btn-info"> see more</button>    
+        </a>
+    </div>
+ </div> 
+</div>

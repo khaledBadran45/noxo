@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Noxo</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li *ngIf="isLogin" class="nav-item">
+          <a class="nav-link" routerLink="home">Home</a>
+        </li>
+        <li *ngIf="isLogin" class="nav-item">
+            <a class="nav-link" routerLink="movies">Movies</a>
+          </li>
+          <li *ngIf="isLogin" class="nav-item">
+            <a class="nav-link" routerLink="tv">tv show</a>
+          </li>
+          <li *ngIf="isLogin" class="nav-item">
+            <a class="nav-link"routerLink="people">people</a>
+          </li>
+          <li *ngIf="isLogin" class="nav-item">
+            <a class="nav-link" routerLink="about">about</a>
+          </li>
+          <li *ngIf="isLogin" class="nav-item">
+            <a class="nav-link" routerLink="networks">networks</a>
+          </li>
+        
+      </ul>
+      <form class="form-inline ml-1">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <div class="social-icons ml-1">
+          <i class="fab mr-3 fa-facebook"></i>
+          <i class="fab mr-3 fa-instagram"></i>
+          <i class="fab mr-3 fa-twitter"></i>
+          <i class="fab mr-3 fa-spotify"></i>
+          <i class="fab mr-3 fa-youtube"></i>
+      </div>
+     <ul class="navbar-nav mr-3">
+          <li *ngIf="!isLogin"class="nav-item">
+            <a class="nav-link" routerLink="reister">register</a>
+          </li>
+          <li *ngIf="!isLogin" class="nav-item ">
+            <a class="nav-link" routerLink="login">login</a>
+          </li>
+          <li *ngIf="isLogin" (click)="islogOut()" class="nav-item ">
+            <a class="nav-link" routerLink="logout">logout</a>
+          </li>
+      </ul>
+    </div>
+  </nav>

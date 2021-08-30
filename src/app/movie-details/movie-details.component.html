@@ -1,0 +1,26 @@
+<div class="container py-5">
+    <div class="row my-3">
+        <div class="col-md-4">
+            <img class="w-100" [src]='imgPrefix+movieId.poster_path'>
+        </div>
+        <div class="col-md-8 mt-4">
+            <h3 class="text-capitalize">{{movieId.title}}</h3>
+            <h4 class="py-2">{{movieId.tagline}}</h4>
+            <div class="row" >
+                <div *ngFor="let type of movieTypes" class="my-2 ml-3 text-center">
+                    <p class="movieType">{{type.name}}</p>
+                </div>
+                
+            </div>
+            <div class="py-2">vote: {{movieId.vote_average}}</div>
+            <div class="py-2">vote count: {{movieId.vote_count}}</div>
+            <div class="py-2">popularity: {{movieId.popularity}}</div>
+            <div class="py-2">realase data: {{movieId.release_date}}</div>
+            <div class="py-4">
+                <h6>
+                    {{movieId.overview}}
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
