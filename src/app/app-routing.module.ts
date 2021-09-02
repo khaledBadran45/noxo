@@ -29,7 +29,6 @@ const routes: Routes = [
   {path:'logout', component:LogoutComponent},
   {path:'reister', component:ReisterComponent},
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
