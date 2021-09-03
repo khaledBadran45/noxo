@@ -13,11 +13,10 @@ export class ReisterComponent implements OnInit {
   constructor( private _Router:Router ,private _AuthService:AuthService) {
     
    }
-
-  ngOnInit(): void {
-  }
-
-
+   
+   
+   
+   ngOnInit(): void {}
 
   
 
@@ -33,30 +32,29 @@ export class ReisterComponent implements OnInit {
   message:string ="";
   color:string ="";
   errors:string="";
-register(registerform:FormGroup){
 
-this._AuthService.registerPost(registerform.value).subscribe((Data)=>{
-  if(Data.message == 'success'){
-
-    this.color= 'color:green;';
-    this.message = 'alert alert-success py-2 ';
+  register(registerform:FormGroup){
+   this._AuthService.registerPost(registerform.value).subscribe((Data)=>{
+     if(Data.message == 'success'){
    
-    this.errors = "sucsess"
-    this._Router.navigate(['/login'])
-
-
-  }else{
-
-    this.color= 'color:red;';
-    this.message = 'alert alert-danger py-2 ';
-    this.errors = Data.errors.email.message
-  }
-})
-
-}
-
-
+       this.color= 'color:green;';
+       this.message = 'alert alert-success py-2 ';
+      
+       this.errors = "sucsess"
+       this._Router.navigate(['/login'])
+   
+   
+     }else{
+   
+       this.color= 'color:red;';
+       this.message = 'alert alert-danger py-2 ';
+       this.errors = Data.errors.email.message
+ 
 
 
 
-}
+     }
+   
+    })
+  
+  }}
